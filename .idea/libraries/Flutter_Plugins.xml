@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="file://$USER_HOME$/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/camera-0.2.1" />
       <root url="file://$USER_HOME$/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.4.5" />
+      <root url="file://$USER_HOME$/Library/Android/flutter/.pub-cache/hosted/pub.dartlang.org/tensorflow_lite-0.0.3" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

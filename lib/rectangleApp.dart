@@ -64,42 +64,61 @@ class HelloRectangle extends StatelessWidget {
             ),
           ),
           new Expanded(child:
-              new Center(child:
-              new Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              new Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  new Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      new IconButton(
-                        icon: new Icon(Icons.camera_enhance),
-                        tooltip: 'Take picture',
-                        iconSize: 36.0,
-                        onPressed: (){
-                          getImage(ImageSource.camera);
-                        },
-                      ),
-                      new Text('Take a picture')
-                    ],
-                  ),
-                  new Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      new IconButton(
-                          icon: new Icon(Icons.photo),
+                  new Container(
+                    margin: const EdgeInsets.only(bottom: 32.0),
+                    child: new Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        new IconButton(
+                          icon: new Icon(Icons.camera),
+                          tooltip: 'Live camera',
                           iconSize: 36.0,
                           onPressed: (){
-                            getImage(ImageSource.gallery);
-                          }
+                            getCamera(context);
+                          },
+                        ),
+                        new Text('Live camera')
+                      ],
+                    ),
+                  ),
+                  new Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      new Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          new IconButton(
+                            icon: new Icon(Icons.camera_enhance),
+                            tooltip: 'Take picture',
+                            iconSize: 36.0,
+                            onPressed: (){
+                              getImage(ImageSource.camera);
+                            },
+                          ),
+                          new Text('Take a picture')
+                        ],
                       ),
-                      new Text('Take from Gallery')
+                      new Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          new IconButton(
+                              icon: new Icon(Icons.photo),
+                              iconSize: 36.0,
+                              onPressed: (){
+                                getImage(ImageSource.gallery);
+                              }
+                          ),
+                          new Text('Take from Gallery')
+                        ],
+                      )
+
                     ],
-                  )
+                  ),
+              ],)
 
-
-                ],
-              ),
-            )
           )
         ],
       ),
